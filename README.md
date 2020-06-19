@@ -23,4 +23,5 @@ done:
   - alt-super-0 to reset gaps and alt-super-shift-0 to toggle gaps
   - default gaps are a nice aesthetic 25
 - the bar now displays shulk's monado arts (with Source Han Sans to match the aesthetic)
+- the bar is now padded (dae bar is literally eris?? -probably aqua)
 
