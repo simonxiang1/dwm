@@ -20,8 +20,8 @@ todo list:
 done:
 - now uses mononoki nerd font
 - gaps patched in, custom binds:
-  - alt-super-j to enlarge gaps (shrink windows)
-  - alt-super-k to decrease gaps (enlarge windows)
+  - alt-super-j to decrease gaps
+  - alt-super-k to enlarge gaps
   - alt-super-0 to reset gaps and alt-super-shift-0 to toggle gaps
   - default gaps are a nice aesthetic 25
 - the bar now displays shulk's monado arts (with Source Han Sans to match the aesthetic)
