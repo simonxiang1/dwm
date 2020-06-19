@@ -5,7 +5,6 @@ todo list:
 	- battery level (no more guessing)
 	- weather? optional
 	- now playing (nah if too much work)
-	- transparency on bar (alpha patch)
 - add xresources compatibility (for pywal)
 - new layouts (grid, attachaside, pertag, centered master)
 - custom keybinds for 
@@ -19,6 +18,7 @@ todo list:
 
 done:
 - now uses mononoki nerd font
+- autostart patched in, very easy to use and works with everything EXCEPT pywal (reee)
 - gaps patched in, custom binds:
   - alt-super-j to decrease gaps
   - alt-super-k to enlarge gaps
@@ -26,4 +26,5 @@ done:
   - default gaps are a nice aesthetic 25
 - the bar now displays shulk's monado arts (with Source Han Sans to match the aesthetic)
 - the bar is now padded (dae bar is literally eris?? -probably aqua)
+- everything is blurred  (thanks compton??)
 
