@@ -1,6 +1,5 @@
 ## personal build of dwm
 todo list:
-- patch in font2 for dwm
 - patch in a clean bar, includes
 	- time (no more timedatectl)
 	- battery level (no more guessing)
@@ -14,6 +13,7 @@ todo list:
 	- brightness (xbacklight -inc/dec 5)
 	- volume (alsamixer?)
 	- ncmpcpp (pause, play, next song, shuffle?)
+- figure out how to get xinitrc to randomize wallpaper on startup
 
 done:
 - now uses mononoki nerd font
@@ -22,5 +22,5 @@ done:
   - alt-super-k to decrease gaps (enlarge windows)
   - alt-super-0 to reset gaps and alt-super-shift-0 to toggle gaps
   - default gaps are a nice aesthetic 25
-- the bar now displays shulk's monado arts
+- the bar now displays shulk's monado arts (with Source Han Sans to match the aesthetic)
 
