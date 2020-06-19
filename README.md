@@ -6,7 +6,6 @@ todo list:
 	- weather? optional
 	- now playing (nah if too much work)
 	- transparency on bar (alpha patch)
-	- not stuck to the top (bar padding patch)
 - add xresources compatibility (for pywal)
 - new layouts (grid, attachaside, pertag, centered master)
 - custom keybinds for 
@@ -14,6 +13,9 @@ todo list:
 	- volume (alsamixer?)
 	- ncmpcpp (pause, play, next song, shuffle?)
 - figure out how to get xinitrc to randomize wallpaper on startup
+- where did my extensive list of patches go reeeee
+- patches: alpha, centered master, cfacts(?), crop windows(?), ewmh (if switching to polybar/lemonbar), fibonacci (?), exresize for floating windows, tabs (for monocle mode), flextile(?? lots of reading), gapless grid + horizontal grid, movestack/push (?), mpdcontrol, next prev tag --> shiftview.c, pertag, rotate stack, save floats (floating aesthetic), sticky, swallow, stacker(?) and stackmfact (vertical resizing), three column layout (same as centered master?), xtile (??? lots of reading)
+
 
 done:
 - now uses mononoki nerd font
