@@ -1,8 +1,8 @@
 ## personal build of dwm
 todo list:
+- patch in font2 for dwm
 - patch in a clean bar, includes
 	- time (no more timedatectl)
-	- tags are now the 5 kanji of the monado (斬, 疾, 翔, 盾, 撃)
 	- battery level (no more guessing)
 	- weather? optional
 	- now playing (nah if too much work)
@@ -21,4 +21,6 @@ done:
   - alt-super-j to enlarge gaps (shrink windows)
   - alt-super-k to decrease gaps (enlarge windows)
   - alt-super-0 to reset gaps and alt-super-shift-0 to toggle gaps
+  - default gaps are a nice aesthetic 25
+- the bar now displays shulk's monado arts
 
