@@ -6,7 +6,7 @@ todo list:
 	- weather? optional
 	- now playing (nah if too much work)
 - add xresources compatibility (for pywal)
-- new layouts (grid, attachaside, pertag, centered master)
+- new layouts (grid, attachaside, centered master)
 - custom keybinds for 
 	- brightness (xbacklight -inc/dec 5)
 	- volume (alsamixer?)
@@ -22,6 +22,8 @@ done:
   - alt-super-j to decrease gaps
   - alt-super-k to enlarge gaps
   - alt-super-0 to reset gaps and alt-super-shift-0 to toggle gaps
+  - alt-q to close a window
+  - alt-enter for new terminal, alt-shift-enter for toggle master
   - default gaps are a nice aesthetic 25
 - patched in swallow, pertag (for swallow to work, change "st" to "St")
 - the bar now displays shulk's monado arts (with Source Han Sans to match the aesthetic)
