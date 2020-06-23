@@ -4,7 +4,6 @@ todo list:
 	- time (no more timedatectl)
 	- battery level (no more guessing)
 	- weather? optional
-	- now playing w/dunst  
 	- insta scrot keybind
 - add xresources compatibility (for pywal)
 - new layouts (grid, attachaside, centered master)
@@ -17,7 +16,6 @@ todo list:
 
 done:
 - now uses mononoki nerd font
-- autostart patched in, very easy to use and works with everything EXCEPT pywal (reee)
 - gaps patched in, custom binds:
   - alt-super-j to decrease gaps
   - alt-super-k to enlarge gaps
@@ -27,8 +25,7 @@ done:
   - alt-enter for new terminal, alt-shift-enter for toggle master
   - alt-tab for next tag, alt-shift-tab for previous tag
   - control-alt-delete to quit (pranking windows users if they find my computer unattended)
-- patched in swallow, pertag (for swallow to work, change "st" to "St"), shiftview
+- patched in swallow, pertag (for swallow to work, change "st" to "St"), shiftview, autostart
 - the bar now displays shulk's monado arts (with Source Han Sans to match the aesthetic)
-- the bar is now padded (dae bar is literally eris?? -probably aqua)
 - everything is blurred  (thanks compton??)
 
