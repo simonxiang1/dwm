@@ -76,6 +76,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
+#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } } //runs commands on keypress
 #include "shiftview.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -93,7 +94,7 @@ static Key keys[] = {
 	{ MODKEY|Mod4Mask,              XK_0,	   defaultgaps,    {0} },
 	{ MODKEY|Mod4Mask|ShiftMask,    XK_0,      togglegaps,     {0} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
-	{ MODKEY|ShiftMask,             XK_F8,     view,           {0} }, //not used
+	{ MODKEY|ShiftMask,             XK_F8,     view,           {0} }, //not used, yeet
 	{ MODKEY,     	                XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
@@ -102,10 +103,10 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
-	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
-	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY|ControlMask,           XK_comma,  focusmon,       {.i = -1 } }, //yeet
+	{ MODKEY|ControlMask,           XK_period, focusmon,       {.i = +1 } }, //yeet
+	{ MODKEY|ShiftMask|ControlMask, XK_comma,  tagmon,         {.i = -1 } }, //yeet
+	{ MODKEY|ShiftMask|ControlMask, XK_period, tagmon,         {.i = +1 } }, //yeet
 	{ MODKEY,			XK_Tab,    shiftview,      {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_Tab,	   shiftview,      {.i = -1 } },	
 	TAGKEYS(                        XK_1,                      0)
@@ -114,6 +115,18 @@ static Key keys[] = {
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
 	{ ControlMask|MODKEY,           XK_Delete, quit,           {0} },
+
+	/*event keys: press a key, run a command*/
+
+	{ 0,				XK_F1,	   spawn,	   SHCMD("mpc toggle") }, //toggle pause/play
+	{ 0,				XK_F2,	   spawn,	   SHCMD("amixer -q sset Master 3%-") }, //decrease volume 3%
+	{ 0,				XK_F3,	   spawn,	   SHCMD("amixer -q sset Master 3%+") }, //increase volume 3%
+	{ 0,				XK_F4,	   spawn,	   SHCMD("xbacklight -dec 5") }, //increase brightness 5%
+	{ 0,				XK_F5,	   spawn,	   SHCMD("xbacklight -inc 5") }, //increase brightness 5%
+	{ MODKEY,			XK_comma,  spawn,	   SHCMD("mpc prev") },
+	{ MODKEY,			XK_period, spawn,	   SHCMD("mpc next") },
+//	{ 0,				XK_F3,	   spawn,	   SHCMD("amixer -q sset Master 3%+") }, screenshot soon
+//	{ 0,				XK_F3,	   spawn,	   SHCMD("amixer -q sset Master 3%+") }, maybe ffmpeg/show key
 };
 
 /* button definitions */

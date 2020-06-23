@@ -25,6 +25,12 @@ done:
   - alt-enter for new terminal, alt-shift-enter for toggle master
   - alt-tab for next tag, alt-shift-tab for previous tag
   - control-alt-delete to quit (pranking windows users if they find my computer unattended)
+- more custom bindings! execute a command on keypress, features implemented: (thank you random reddit man for your code)
+  - f1 to play/pause song
+  - f2/f3 to dec/inc volume by 3%
+  - f4/f5 to dec/inc brightness by 5%
+  - alt-comma/alt-period to go to prev song/next song
+    - it makes sense if you think of it as ncmpcpp binds, comma maps to "<" and period maps to ">"
 - patched in swallow, pertag (for swallow to work, change "st" to "St"), shiftview, autostart
 - the bar now displays shulk's monado arts (with Source Han Sans to match the aesthetic)
 - everything is blurred  (thanks compton??)
