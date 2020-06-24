@@ -14,7 +14,8 @@ static const int vertpad            = 0;       /* vertical padding of bar */
 static const int sidepad            = 0;       /* horizontal padding of bar */
 static const char *fonts[]          = { 
 	"mononoki Nerd Font:size=11",
-	"Source Han Sans:size=11"
+	"Source Han Sans:size=11",
+	"Noto Color Emoji:size=11"
 };
 static const char dmenufont[]       = "mononoki Nerd Font:size=11";
 static const char col_gray1[]       = "#222222";
