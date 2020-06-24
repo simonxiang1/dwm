@@ -13,10 +13,10 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int vertpad            = 0;       /* vertical padding of bar */
 static const int sidepad            = 0;       /* horizontal padding of bar */
 static const char *fonts[]          = { 
-	"Iosevka:size=11",
+	"mononoki Nerd Font:size=11",
 	"Source Han Sans:size=11"
 };
-static const char dmenufont[]       = "Iosevka:size=11";
+static const char dmenufont[]       = "mononoki Nerd Font:size=11";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -30,8 +30,8 @@ static const char *colors[][3]      = {
 
 static const char *const autostart[] = {
 	"compton", "--config", "/home/simon/.config/compton/compton.conf", NULL,
-	"wal", "-R", NULL,
 	"st", NULL,
+	"pavucontrol", NULL,
 	NULL /* terminate */
 };
 
@@ -121,8 +121,8 @@ static Key keys[] = {
 	{ 0,				XK_F1,	   spawn,	   SHCMD("mpc toggle") }, //toggle pause/play
 	{ 0,				XK_F2,	   spawn,	   SHCMD("amixer -q sset Master 3%-") }, //decrease volume 3%
 	{ 0,				XK_F3,	   spawn,	   SHCMD("amixer -q sset Master 3%+") }, //increase volume 3%
-	{ 0,				XK_F4,	   spawn,	   SHCMD("xbacklight -dec 5") }, //increase brightness 5%
-	{ 0,				XK_F5,	   spawn,	   SHCMD("xbacklight -inc 5") }, //increase brightness 5%
+	{ 0,				XK_F4,	   spawn,	   SHCMD("xbacklight -dec 2.5") }, //increase brightness 2.5%
+	{ 0,				XK_F5,	   spawn,	   SHCMD("xbacklight -inc 2.5") }, //increase brightness 2.5%
 	{ MODKEY,			XK_comma,  spawn,	   SHCMD("mpc prev") },
 	{ MODKEY,			XK_period, spawn,	   SHCMD("mpc next") },
 //	{ 0,				XK_F3,	   spawn,	   SHCMD("amixer -q sset Master 3%+") }, screenshot soon

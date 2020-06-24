@@ -28,7 +28,7 @@ done:
 - more custom bindings! execute a command on keypress, features implemented: (thank you random reddit man for your code)
   - f1 to play/pause song
   - f2/f3 to dec/inc volume by 3%
-  - f4/f5 to dec/inc brightness by 5%
+  - f4/f5 to dec/inc brightness by 2.5%
   - alt-comma/alt-period to go to prev song/next song
     - it makes sense if you think of it as ncmpcpp binds, comma maps to "<" and period maps to ">"
 - patched in swallow, pertag (for swallow to work, change "st" to "St"), shiftview, autostart
