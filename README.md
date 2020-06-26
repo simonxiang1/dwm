@@ -34,4 +34,4 @@ done:
 - patched in swallow, pertag (for swallow to work, change "st" to "St"), shiftview, autostart
 - the bar now displays shulk's monado arts (with Source Han Sans to match the aesthetic)
 - everything is blurred  (thanks compton??)
-
+help
