@@ -12,7 +12,7 @@ todo list:
 	- ncmpcpp (pause, play, next song, volume up/down, shuffle- use pamixer?)
 - figure out how to get xinitrc to randomize wallpaper on startup
 - where did my extensive list of patches go reeeee
-- patches: centered master, cfacts(?), crop windows(?), ewmh (if switching to polybar/lemonbar), fibonacci (?), exresize for floating windows, tabs (for monocle mode), flextile(?? lots of reading), gapless grid + horizontal grid, movestack/push (?), mpdcontrol, rotate stack, save floats (floating aesthetic), sticky, stacker(?) and stackmfact (vertical resizing), three column layout (same as centered master?), xtile (??? lots of reading)
+- patches: centered master, cfacts(?), crop windows(?), fibonacci (?), exresize for floating windows, tabs (for monocle mode), flextile(?? lots of reading), gapless grid + horizontal grid, movestack/push (?), rotate stack, save floats (floating aesthetic), sticky, stacker(?) and stackmfact (vertical resizing), three column layout (same as centered master?), xtile (??? lots of reading)
 
 done:
 - now uses mononoki nerd font
@@ -31,7 +31,6 @@ done:
   - f4/f5 to dec/inc brightness by 2.5%
   - alt-comma/alt-period to go to prev song/next song
     - it makes sense if you think of it as ncmpcpp binds, comma maps to "<" and period maps to ">"
-- patched in swallow, pertag (for swallow to work, change "st" to "St"), shiftview, autostart
+- patched in swallow, pertag (for swallow to work, change "st" to "St"), shiftview, autostart, ewmh (not entirely sure if it works or not)
 - the bar now displays shulk's monado arts (with Source Han Sans to match the aesthetic)
 - everything is blurred  (thanks compton??)
-help
