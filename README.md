@@ -5,14 +5,8 @@ todo list:
 	- time (no more timedatectl)
 	- battery level (no more guessing)
 	- weather? optional
-	- insta scrot keybind
 - add xresources compatibility (for pywal)
 - new layouts (grid, attachaside, centered master)
-- custom keybinds for 
-	- brightness (xbacklight -inc/dec 5)
-	- ncmpcpp (pause, play, next song, volume up/down, shuffle- use pamixer?)
-- figure out how to get xinitrc to randomize wallpaper on startup
-- where did my extensive list of patches go reeeee
 - patches: centered master, cfacts(?), crop windows(?), fibonacci (?), exresize for floating windows, tabs (for monocle mode), flextile(?? lots of reading), gapless grid + horizontal grid, movestack/push (?), rotate stack, save floats (floating aesthetic), sticky, stacker(?) and stackmfact (vertical resizing), three column layout (same as centered master?), xtile (??? lots of reading)
 
 done:
@@ -32,6 +26,8 @@ done:
   - f4/f5 to dec/inc brightness by 2.5%
   - alt-comma/alt-period to go to prev song/next song
     - it makes sense if you think of it as ncmpcpp binds, comma maps to "<" and period maps to ">"
+  - conversely, alt-shift-period/alt-shift-comma to seek forward/backward 3 seconds respectively
+  - print screen (prt sc, XK_Print) for instascrot
 - patched in swallow, pertag (for swallow to work, change "st" to "St"), shiftview, autostart, ewmh (not entirely sure if it works or not), attach direction (changed position of newly spawned window)
 - the bar now displays shulk's monado arts (with Source Han Sans to match the aesthetic)
 - everything is blurred  (thanks compton??)

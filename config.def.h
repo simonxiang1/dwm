@@ -125,7 +125,9 @@ static Key keys[] = {
 	{ 0,				XK_F5,	   spawn,	   SHCMD("xbacklight -inc 2.5") }, //increase brightness 2.5%
 	{ MODKEY,			XK_comma,  spawn,	   SHCMD("mpc prev") },
 	{ MODKEY,			XK_period, spawn,	   SHCMD("mpc next") },
-//	{ 0,				XK_F3,	   spawn,	   SHCMD("amixer -q sset Master 3%+") }, screenshot soon
+	{ MODKEY|ShiftMask,		XK_comma,  spawn,	   SHCMD("mpc seek -3") },
+	{ MODKEY|ShiftMask,		XK_period, spawn,	   SHCMD("mpc seek +3") },
+	{ 0,				XK_Print,  spawn,	   SHCMD("scrot") }, //instascrot
 //	{ 0,				XK_F3,	   spawn,	   SHCMD("amixer -q sset Master 3%+") }, maybe ffmpeg/show key
 };
 
