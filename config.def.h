@@ -123,9 +123,9 @@ static Key keys[] = {
 	{ 0,				XK_F3,	   spawn,	   SHCMD("amixer -q sset Master 3%+") }, //increase volume 3%
 	{ 0,				XK_F4,	   spawn,	   SHCMD("xbacklight -dec 2.5") }, //increase brightness 2.5%
 	{ 0,				XK_F5,	   spawn,	   SHCMD("xbacklight -inc 2.5") }, //increase brightness 2.5%
-	{ MODKEY,			XK_comma,  spawn,	   SHCMD("mpc prev") },
+	{ MODKEY,			XK_comma,  spawn,	   SHCMD("mpc prev") }, //prev/next song
 	{ MODKEY,			XK_period, spawn,	   SHCMD("mpc next") },
-	{ MODKEY|ShiftMask,		XK_comma,  spawn,	   SHCMD("mpc seek -3") },
+	{ MODKEY|ShiftMask,		XK_comma,  spawn,	   SHCMD("mpc seek -3") }, //seek fwd/bkd
 	{ MODKEY|ShiftMask,		XK_period, spawn,	   SHCMD("mpc seek +3") },
 	{ 0,				XK_Print,  spawn,	   SHCMD("scrot") }, //instascrot
 //	{ 0,				XK_F3,	   spawn,	   SHCMD("amixer -q sset Master 3%+") }, maybe ffmpeg/show key
