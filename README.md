@@ -1,33 +1,56 @@
-## personal build of dwm
-todo list:
-- the bar is broken help
-- patch in a clean bar, includes
-	- time (no more timedatectl)
-	- battery level (no more guessing)
-	- weather? optional
-- add xresources compatibility (for pywal)
-- new layouts (grid, attachaside, centered master)
-- patches: centered master, cfacts(?), crop windows(?), fibonacci (?), exresize for floating windows, tabs (for monocle mode), flextile(?? lots of reading), gapless grid + horizontal grid, movestack/push (?), rotate stack, save floats (floating aesthetic), sticky, stacker(?) and stackmfact (vertical resizing), three column layout (same as centered master?), xtile (??? lots of reading)
+## Personal build of dwm window manager
 
-done:
-- now uses mononoki nerd font
-- gaps patched in, custom binds:
-  - alt-super-j to decrease gaps
-  - alt-super-k to enlarge gaps
-  - alt-super-0 to reset gaps and alt-super-shift-0 to toggle gaps
-  - default gaps are a nice aesthetic 25
-  - alt-q to close a window
-  - alt-enter for new terminal, alt-shift-enter for toggle master
-  - alt-tab for next tag, alt-shift-tab for previous tag
-  - control-alt-delete to quit (pranking windows users if they find my computer unattended)
-- more custom bindings! execute a command on keypress, features implemented: (thank you random reddit man for your code)
-  - f1 to play/pause song
-  - f2/f3 to dec/inc volume by 3%
-  - f4/f5 to dec/inc brightness by 2.5%
-  - alt-comma/alt-period to go to prev song/next song
-    - it makes sense if you think of it as ncmpcpp binds, comma maps to "<" and period maps to ">"
-  - conversely, alt-shift-period/alt-shift-comma to seek forward/backward 3 seconds respectively
-  - print screen (prt sc, XK_Print) for instascrot
-- patched in swallow, pertag (for swallow to work, change "st" to "St"), shiftview, autostart, ewmh (not entirely sure if it works or not), attach direction (changed position of newly spawned window)
-- the bar now displays shulk's monado arts (with Source Han Sans to match the aesthetic)
-- everything is blurred  (thanks compton??)
+Dwm is a dynamic window manager (dwm) from suckless that dynamically tiles windows based off a master-slave orientation. Base dwm is very bland and doesn't come with very much, so I added some patches for functionality and style.
+
+To install my build of dwm, run
+```
+git clone https://github.com/simonxiang1/dwm
+cd dwm
+sudo make install clean
+```
+Note that dwm requires that the base font, mononoki, be installed on your system. Other optional dependencies include mpc, alsa, xbacklight, and compton.
+
+## Features:
+
+- Custom keybindings!
+  - Alt-Super-j/Alt-Super-k to decrease/increase gaps
+  - Alt-Super-0 to reset gaps and Alt-Super-Shift-0 to toggle gaps
+  - Alt-q to close a window
+  - Alt-Enter for a new terminal
+  - Alt-Shift-Enter to toggle a window in the master area
+  - Alt-Tab to view the next tab (workspace), Alt-Shift-Tab to view previous tag
+  - F1 to play/pause music (mpc)
+  - F2/F3 to decrease/increase volume by 3%
+  - F4/F5 to decrease/increase brightness by 2.5%
+  - Alt-comma/Alt-period to skip to previous/next song
+    - (Think of this as ncmpcpp binds: comma maps to <, period maps to >)
+  - Alt-Shift-comma/Alt-Shift-period to seek forward/backward 3 seconds in a song  - Print screen key (prt sc, XK_Print) to screenshot (saves to home directory)
+  - Control-Alt-Delete to quit dwm and log out
+  - All other binds are dwm default (see man dwm)
+- Patches applied:
+  - Swallow- floating windows spawned by a terminal consume the useless terminal to save screen real estate
+  - Pertag- each tag saves information about bar status, window type (floating, monocle, etc) to make tags function more like workspaces
+  - Shiftview- allows cycling between tags
+  - Autostart- will autostart compton and st by default in this build
+  - EWMH- doesn't entirely work but should provide support for things like polybar
+  - Attach Direction- choose where new windows are spawned, by default in this build new windows will spawn from the top in the slave stack
+- The bar displays Shulk's Monado Arts (斬, 疾, 翔, 盾, 撃) instead of the boring "1 2 3 4 5"
+
+#### Notes:
+- There are lots of issues regarding the bar in my build of dwm	
+  - Notably, polybar doesn't start properly
+  - The dwm bar doesn't display any information on the right with xsetroot
+  - Not even sure if the EWMH patch works
+  - I would like for it to display the time, battery level, and maybe weather
+- Xresources compatibility means recompiling dwm on each color scheme switch
+  - To make this work like intended, I would have to find a way to have dwm recompile without logging out
+  - Then I would have to run this each time I run "newtheme", which is a pain
+- Some patches I would like to apply but am too lazy to figure out:
+  - Layouts: Gapless Grid, Centered Master, Fibonacci 
+  - Floating: Exresize, Save Floats, Crop Windows
+  - Tabs (monocle), Movestack or Push, Stackmfact (vertical resizing), Rotate Stack
+  - Manual too long:
+    - Flextile
+    - Cfacts
+    - Stacker
+    - Xtile
