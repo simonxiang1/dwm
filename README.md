@@ -6,9 +6,21 @@ To install my build of dwm, run
 ```
 git clone https://github.com/simonxiang1/dwm
 cd dwm
+```
+(Optional) Now my build of dwm autostart compton pointing to my specific configuration file, so of course you'll need to edit this to fit your system. Simply run
+```
+vim config.def.h
+/autostart
+```
+Once you've found the autostart array, simply replace my path with the correct path to your compton configuration file (or delete the line altogether). Once you've made your changes, run
+```
+cp config.def.h config.h
+```
+(Not optional) Finally, compile dwm by running
+```
 sudo make install clean
 ```
-Note that dwm requires that the base font, mononoki, be installed on your system. Other optional dependencies include mpc, alsa, xbacklight, and compton.
+Dependencies include st, dmenu, mpc, alsa, xbacklight, scrot, and compton. However, you can easily subsitute these for whatever you like in the config.h file.
 
 ## Features:
 
