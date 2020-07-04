@@ -7,7 +7,7 @@ To install my build of dwm, run
 git clone https://github.com/simonxiang1/dwm
 cd dwm
 ```
-(Optional) Now my build of dwm autostart compton pointing to my specific configuration file, so of course you'll need to edit this to fit your system. Simply run
+(Optional) Now my build of dwm autostarts compton pointing to my specific configuration file, so of course you'll need to edit this to fit your system. Simply run
 ```
 vim config.def.h
 /autostart
@@ -20,7 +20,7 @@ cp config.def.h config.h
 ```
 sudo make install clean
 ```
-Dependencies include st, dmenu, mpc, alsa, xbacklight, scrot, and compton. However, you can easily subsitute these for whatever you like in the config.h file.
+Dependencies include st, dmenu, mpc, alsa, xbacklight, scrot, and compton. However, you can easily subsitute these for whatever you like in the config.h file. Make sure to append 'exec dwm' or some variant to your .xinitrc file.
 
 ## Features:
 
@@ -31,12 +31,13 @@ Dependencies include st, dmenu, mpc, alsa, xbacklight, scrot, and compton. Howev
   - Alt-Enter for a new terminal
   - Alt-Shift-Enter to toggle a window in the master area
   - Alt-Tab to view the next tab (workspace), Alt-Shift-Tab to view previous tag
-  - F1 to play/pause music (mpc)
+  - F1 to play/pause music (mpd)
   - F2/F3 to decrease/increase volume by 3%
   - F4/F5 to decrease/increase brightness by 2.5%
   - Alt-comma/Alt-period to skip to previous/next song
     - (Think of this as ncmpcpp binds: comma maps to <, period maps to >)
-  - Alt-Shift-comma/Alt-Shift-period to seek forward/backward 3 seconds in a song  - Print screen key (prt sc, XK_Print) to screenshot (saves to home directory)
+  - Alt-Shift-comma/Alt-Shift-period to seek forward/backward 3 seconds in a song  
+  - Print screen key (prt sc, XK_Print) to screenshot (saves to home directory)
   - Control-Alt-Delete to quit dwm and log out
   - All other binds are dwm default (see man dwm)
 - Patches applied:
