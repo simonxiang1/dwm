@@ -1,4 +1,9 @@
-/* See LICENSE file for copyright and license details. */
+         /*_*/
+ /*___ ___| |__*/
+/*/ __/ __| '_ \*/
+/*\__ \__ \ | | |*/
+/*|___/___/_| |_|*/
+
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
