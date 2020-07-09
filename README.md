@@ -1,6 +1,6 @@
 ## Personal build of dwm window manager
 
-Dwm is a dynamic window manager (dwm) from suckless that dynamically tiles windows based off a master-slave orientation. Base dwm is very bland and doesn't come with very much, so I added some patches for functionality and style.
+Dwm is a dynamic window manager (dwm) from suckless that dynamically tiles windows based off a master-slave orientation. Vanilla dwm is very bland and doesn't come with very much, so I added some patches for functionality and style.
 
 To install my build of dwm, run
 ```
@@ -12,7 +12,7 @@ cd dwm
 vim config.def.h
 /autostart
 ```
-Once you've found the autostart array, simply replace my path with the correct path to your compton configuration file (or delete the line altogether). Once you've made your changes, run
+Once you find the autostart array, simply replace my path with the correct path to your compton configuration file (or delete the line altogether). After you've made your changes, run
 ```
 cp config.def.h config.h
 ```
