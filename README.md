@@ -12,7 +12,7 @@ cd dwm
 vim config.def.h
 /autostart
 ```
-Once you find the autostart array, simply replace my path with the correct path to your compton configuration file (or delete the line altogether). After you've made your changes, run
+Once you find the autostart array, replace my path with the correct path to your compton configuration file (or delete the line altogether). After you've made your changes, run
 ```
 cp config.def.h config.h
 ```
