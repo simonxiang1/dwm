@@ -35,7 +35,6 @@ static const char *colors[][3]      = {
 
 static const char *const autostart[] = {
 	"compton", "--config", "/home/simon/.config/compton/compton.conf", NULL,
-	"st", NULL,
 	NULL /* terminate */
 };
 
