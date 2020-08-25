@@ -31,6 +31,7 @@ Dependencies include st, dmenu, mpc, alsa, xbacklight, scrot, and compton. Howev
   - Alt-Enter for a new terminal
   - Alt-Shift-Enter to toggle a window in the master area
   - Alt-Tab to view the next tab (workspace), Alt-Shift-Tab to view previous tag
+  - Alt-u for centered master, Alt-o for centered floating master
   - F1 to play/pause music (mpd)
   - F2/F3 to decrease/increase volume by 3%
   - F4/F5 to decrease/increase brightness by 2.5%
@@ -46,6 +47,7 @@ Dependencies include st, dmenu, mpc, alsa, xbacklight, scrot, and compton. Howev
   - Shiftview- allows cycling between tags
   - Autostart- will autostart compton and st by default in this build
   - EWMH- doesn't entirely work but should provide support for things like polybar
+  - Centered Master- new window layouts
   - Attach Direction- choose where new windows are spawned, by default in this build new windows will spawn from the top in the slave stack
 - The bar displays Shulk's Monado Arts (斬, 疾, 翔, 盾, 撃) instead of the boring "1 2 3 4 5"
 
@@ -55,11 +57,12 @@ Dependencies include st, dmenu, mpc, alsa, xbacklight, scrot, and compton. Howev
   - The dwm bar doesn't display any information on the right with xsetroot
   - Not even sure if the EWMH patch works
   - I would like for it to display the time, battery level, and maybe weather
+  - Considering patching dwm-ipc and polybar-dwm-module
 - Xresources compatibility means recompiling dwm on each color scheme switch
   - To make this work like intended, I would have to find a way to have dwm recompile without logging out
   - Then I would have to run this each time I run "newtheme", which is a pain
 - Some patches I would like to apply but am too lazy to figure out:
-  - Layouts: Gapless Grid, Centered Master, Fibonacci 
+  - Layouts: Gapless Grid, Fibonacci 
   - Floating: Exresize, Save Floats, Crop Windows
   - Tabs (monocle), Movestack or Push, Stackmfact (vertical resizing), Rotate Stack
   - Manual too long:
