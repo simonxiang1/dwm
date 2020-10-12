@@ -7,12 +7,11 @@ To install my build of dwm, run
 git clone https://github.com/simonxiang1/dwm
 cd dwm
 ```
-(Optional) Now my build of dwm autostarts compton pointing to my specific configuration file, so of course you'll need to edit this to fit your system. Simply run
-```
-vim config.def.h
-/autostart
-```
-Once you find the autostart array, replace my path with the correct path to your compton configuration file (or delete the line altogether). After you've made your changes, run
+(Optional) Now my build of dwm autostarts compton pointing to my specific configuration file, so of course you'll need to edit this to fit your system. Simply type `vim config.def.h` and search for the word "autostart". Once you find the autostart array, replace my path with the correct path to your compton configuration file (or delete the line altogether).
+
+Also, dwm saves screenshots to a custom directory on my system. To change this, while in the `config.def.h` file search for "scrot" and change the file path, or just delete the command and replace it with `scrot` if you just want to save screenshots to the home directory.
+
+ After you've made your changes, run
 ```
 cp config.def.h config.h
 ```
@@ -20,7 +19,7 @@ cp config.def.h config.h
 ```
 sudo make install clean
 ```
-Dependencies include st, dmenu, mpc, alsa, xbacklight, scrot, and compton. However, you can easily subsitute these for whatever you like in the config.h file. Make sure to append 'exec dwm' or some variant to your .xinitrc file.
+Soft dependencies include st, dmenu, mpc, alsa, xbacklight, scrot, and compton. However, you can easily subsitute these for whatever you like in the config.h file. Make sure to append 'exec dwm' or some variant to your .xinitrc file.
 
 ## Features:
 
@@ -38,7 +37,7 @@ Dependencies include st, dmenu, mpc, alsa, xbacklight, scrot, and compton. Howev
   - Alt-comma/Alt-period to skip to previous/next song
     - (Think of this as ncmpcpp binds: comma maps to <, period maps to >)
   - Alt-Shift-comma/Alt-Shift-period to seek forward/backward 3 seconds in a song  
-  - Print screen key (prt sc, XK_Print) to screenshot (saves to home directory)
+  - Print screen key (prt sc, XK_Print) to screenshot (saves to custom folder)
   - Control-Alt-Delete to quit dwm and log out
   - All other binds are dwm default (see man dwm)
 - Patches applied:
