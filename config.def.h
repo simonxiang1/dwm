@@ -34,7 +34,8 @@ static const char *const autostart[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "斬", "疾", "翔", "盾", "撃"};
+/* static const char *tags[] = { "斬", "疾", "翔", "盾", "撃"}; */
+static const char *tags[] = { "•", "•", "•", "•", "•"};
 
 static const Rule rules[] = {
 	/* xprop(1):

@@ -48,7 +48,7 @@ Soft dependencies include st, dmenu, mpc, alsa, xbacklight, scrot, and compton. 
   - EWMH- doesn't entirely work but should provide support for things like polybar
   - Centered Master- new window layouts
   - Attach Direction- choose where new windows are spawned, by default in this build new windows will spawn from the top in the slave stack
-- The bar displays Shulk's Monado Arts (斬, 疾, 翔, 盾, 撃) instead of the boring "1 2 3 4 5"
+- ~~The bar displays Shulk's Monado Arts (斬, 疾, 翔, 盾, 撃) instead of the boring "1 2 3 4 5"~~ Now displays black dots
 
 #### Notes:
 - There are lots of issues regarding the bar in my build of dwm	
