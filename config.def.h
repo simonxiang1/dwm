@@ -131,7 +131,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_period, spawn,	   SHCMD("mpc next") },
 	{ MODKEY|ShiftMask,		XK_comma,  spawn,	   SHCMD("mpc seek -3") }, //seek fwd/bkd
 	{ MODKEY|ShiftMask,		XK_period, spawn,	   SHCMD("mpc seek +3") },
-	{ 0,				XK_Print,  spawn,	   SHCMD("scrot -e 'mv $f ~/Desktop/personal/photos/screenshots'") }, //instascrot
+	{ 0,				XK_Print,  spawn,	   SHCMD("sleep 0.2; scrot -e 'mv $f ~/Desktop/personal/photos/screenshots'") }, //insta(+0.2)scrot
 //	{ 0,				XK_F3,	   spawn,	   SHCMD("amixer -q sset Master 3%+") }, maybe ffmpeg/show key
 };
 
