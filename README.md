@@ -11,6 +11,8 @@ cd dwm
 
 Also, dwm saves screenshots to a custom directory on my system. To change this, while in the `config.def.h` file search for "scrot" and change the file path, or just delete the command and replace it with `scrot` if you just want to save screenshots to the home directory.
 
+One more thing: you may want to install [polybar-dwm-module](https://github.com/mihirlad55/polybar-dwm-module), since my build of dwm is set up to work with polybar. (You can skip the dwm-specific install instructions, I took care of that for you! But you still need to follow the polybar related ones, or just look in my [dotfiles](https://github.com/simonxiang1/dotfiles/tree/master/.config/polybar).) If you want to use the native bar, set the variable `usealtbar` to 0 in `config.def.h`.
+
  After you've made your changes, run
 ```
 cp config.def.h config.h
@@ -19,7 +21,7 @@ cp config.def.h config.h
 ```
 sudo make install clean
 ```
-Soft dependencies include st, dmenu, mpc, alsa, xbacklight, scrot, and compton. However, you can easily subsitute these for whatever you like in the config.h file. Make sure to append 'exec dwm' or some variant to your .xinitrc file.
+Soft dependencies include st, dmenu, mpc, alsa, xbacklight, scrot, polybar, and picom. However, you can easily subsitute these for whatever you like in the config.h file. Make sure to append 'exec dwm' or some variant to your .xinitrc file.
 
 ## Features:
 
@@ -41,31 +43,24 @@ Soft dependencies include st, dmenu, mpc, alsa, xbacklight, scrot, and compton. 
   - Control-Alt-Delete to quit dwm and log out
   - All other binds are dwm default (see man dwm)
 - Patches applied:
-  - Swallow- floating windows spawned by a terminal consume the useless terminal to save screen real estate
+  - ~~Swallow- floating windows spawned by a terminal consume the useless terminal to save screen real estate~~ goodbye swallow, sane people use dmenu to open things anyway
   - Pertag- each tag saves information about bar status, window type (floating, monocle, etc) to make tags function more like workspaces
   - Shiftview- allows cycling between tags
   - Autostart- will autostart compton and st by default in this build
   - EWMH- doesn't entirely work but should provide support for things like polybar
   - Centered Master- new window layouts
   - Attach Direction- choose where new windows are spawned, by default in this build new windows will spawn from the top in the slave stack
-- ~~The bar displays Shulk's Monado Arts (斬, 疾, 翔, 盾, 撃) instead of the boring "1 2 3 4 5"~~ Now displays black dots
+  - ~~The bar displays Shulk's Monado Arts (斬, 疾, 翔, 盾, 撃) instead of the boring "1 2 3 4 5"~~ Now displays black dots
+  - !NEW! dwm-anybar and dwm-ipc (see [here](https://github.com/mihirlad55/dwm-anybar) and [here](https://github.com/mihirlad55/dwm-ipc) respectively) have been patched in! This means we have very functional polybar support, provided you use [polybar-dwm-module](https://github.com/mihirlad55/polybar-dwm-module)
 
 #### Notes:
-- There are lots of issues regarding the bar in my build of dwm	
-  - Notably, polybar doesn't start properly
-  - The dwm bar doesn't display any information on the right with xsetroot
-  - Not even sure if the EWMH patch works
-  - I would like for it to display the time, battery level, and maybe weather
-  - Considering patching dwm-ipc and polybar-dwm-module
-- Xresources compatibility means recompiling dwm on each color scheme switch
-  - To make this work like intended, I would have to find a way to have dwm recompile without logging out
-  - Then I would have to run this each time I run "newtheme", which is a pain
-- Some patches I would like to apply but am too lazy to figure out:
-  - Layouts: Gapless Grid, Fibonacci 
-  - Floating: Exresize, Save Floats, Crop Windows
-  - Tabs (monocle), Movestack or Push, Stackmfact (vertical resizing), Rotate Stack
-  - Manual too long:
-    - Flextile
-    - Cfacts
-    - Stacker
-    - Xtile
+- There are ~~lots of~~ _no_ issues regarding the bar in my build of dwm	
+  - ~~Notably, polybar doesn't start properly~~ yay
+  - ~~The dwm bar doesn't display any information on the right with xsetroot~~ fixed with polybar
+  - ~~I would like for it to display the time, battery level, and maybe weather~~ fixed with polybar
+  - ~~Considering patching dwm-ipc and polybar-dwm-module~~ done
+- ~~Xresources compatibility means recompiling dwm on each color scheme switch~~ fixed with polybar
+  - ~~To make this work like intended, I would have to find a way to have dwm recompile without logging out~~ fixed with polybar
+  - ~~Then I would have to run this each time I run "newtheme", which is a pain~~ fixed with polybar
+
+Pull requests welcome!
