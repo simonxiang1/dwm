@@ -1,17 +1,14 @@
 /* testing git */
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const int swallowfloating    = 1;        /* 1 means swallow floating windows by default */
 static const unsigned int gappih    = 25;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 25;       /* vert inner gap between windows */
 static const unsigned int gappoh    = 25;       /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov    = 25;       /* vert outer gap between windows and screen edge */
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
-static const int showbar            = 1;        /* 0 means no bar */
+static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int vertpad            = 0;       /* vertical padding of bar */
-static const int sidepad            = 10;       /* horizontal padding of bar */
 static const char *fonts[]          = { 
 	"mononoki Nerd Font:size=11",
 	"Source Han Sans:size=11",
@@ -151,5 +148,23 @@ static Button buttons[] = {
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+};
+
+static const char *ipcsockpath = "/tmp/dwm.sock";
+static IPCCommand ipccommands[] = {
+  IPCCOMMAND(  view,                1,      {ARG_TYPE_UINT}   ),
+  IPCCOMMAND(  toggleview,          1,      {ARG_TYPE_UINT}   ),
+  IPCCOMMAND(  tag,                 1,      {ARG_TYPE_UINT}   ),
+  IPCCOMMAND(  toggletag,           1,      {ARG_TYPE_UINT}   ),
+  IPCCOMMAND(  tagmon,              1,      {ARG_TYPE_UINT}   ),
+  IPCCOMMAND(  focusmon,            1,      {ARG_TYPE_SINT}   ),
+  IPCCOMMAND(  focusstack,          1,      {ARG_TYPE_SINT}   ),
+  IPCCOMMAND(  zoom,                1,      {ARG_TYPE_NONE}   ),
+  IPCCOMMAND(  incnmaster,          1,      {ARG_TYPE_SINT}   ),
+  IPCCOMMAND(  killclient,          1,      {ARG_TYPE_SINT}   ),
+  IPCCOMMAND(  togglefloating,      1,      {ARG_TYPE_NONE}   ),
+  IPCCOMMAND(  setmfact,            1,      {ARG_TYPE_FLOAT}  ),
+  IPCCOMMAND(  setlayoutsafe,       1,      {ARG_TYPE_PTR}    ),
+  IPCCOMMAND(  quit,                1,      {ARG_TYPE_NONE}   )
 };
 
