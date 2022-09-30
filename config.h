@@ -1,6 +1,6 @@
 /* testing git */
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappih    = 25;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 25;       /* vert inner gap between windows */
@@ -80,6 +80,7 @@ static const char *termcmd[]  = { "st", NULL };
 
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } } //runs commands on keypress
 #include "shiftview.c"
+#include <X11/XF86keysym.h> //x11 key definitions (for poweroff)
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -132,7 +133,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_comma,  spawn,	   SHCMD("mpc seek -3") }, //seek fwd/bkd
 	{ MODKEY|ShiftMask,		XK_period, spawn,	   SHCMD("mpc seek +3") },
 	{ 0,				XK_Print,  spawn,	   SHCMD("sleep 0.2; scrot -e 'mv $f ~/Desktop/personal/photos/screenshots'") }, //insta(+0.2)scrot
-//	{ 0,				XK_F3,	   spawn,	   SHCMD("amixer -q sset Master 3%+") }, maybe ffmpeg/show key
+        { 0,                            XF86XK_PowerOff, spawn,    SHCMD("neon-logout") }, //logout manager
 };
 
 /* button definitions */
